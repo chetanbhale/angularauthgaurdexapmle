@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class AuthService {
   constructor(private route: Router) {}
 
@@ -18,6 +20,6 @@ export class AuthService {
   }
 
   logout() {
-    return this.route.navigate(['/login']);
+    this.route.navigate(['/login']);
   }
 }
