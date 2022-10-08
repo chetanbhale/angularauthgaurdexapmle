@@ -19,7 +19,7 @@ export class AuthService {
     this.isSignin.next(isSign);
   }
 
-  logout() {
-    this.route.navigate(['/login']);
-  }
+  // logout() {
+  //   this.route.navigate(['/login']);
+  // }
 }

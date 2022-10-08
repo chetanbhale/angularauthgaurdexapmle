@@ -22,6 +22,6 @@ import { AuthService } from './auth.service';
     DasboardContentComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [AuthGuard],
+  providers: [AuthGuard, AuthService],
 })
 export class AppModule {}
