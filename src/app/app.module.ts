@@ -9,6 +9,8 @@ import { RegisterComponent } from './register/register.component';
 import { AppRoutingModule } from '../../app-routing.module';
 import { DasboardContentComponent } from './dashboard/dasboard-content/dasboard-content.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthGuard } from './auth.guard';
+import { AuthService } from './auth.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
@@ -20,5 +22,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DasboardContentComponent,
   ],
   bootstrap: [AppComponent],
+  providers: [AuthGuard, AuthService],
 })
 export class AppModule {}
