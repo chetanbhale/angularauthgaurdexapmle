@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
       const isSignin = false;
       this.authser.handleSigninDisplay(isSignin);
       // console.log(this.fromGrup.value);
-      this.route.navigate(['/dashboard']);
+      this.route.navigate(['/dashboard/dash-content']);
     }
   }
 }

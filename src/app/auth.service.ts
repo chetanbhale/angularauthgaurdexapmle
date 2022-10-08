@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class AuthService {
-  constructor() {}
+  constructor(private route: Router) {}
 
   public user = new BehaviorSubject<any>(null);
   public isSignin = new BehaviorSubject<boolean>(true);
@@ -14,5 +15,9 @@ export class AuthService {
 
   handleSigninDisplay(isSign: boolean) {
     this.isSignin.next(isSign);
+  }
+
+  logout() {
+    return this.route.navigate(['/login']);
   }
 }
