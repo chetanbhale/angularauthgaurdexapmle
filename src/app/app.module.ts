@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AppRoutingModule } from '../../app-routing.module';
 import { DasboardContentComponent } from './dashboard/dasboard-content/dasboard-content.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
@@ -15,6 +16,7 @@ import { DasboardContentComponent } from './dashboard/dasboard-content/dasboard-
     AppComponent,
     HelloComponent,
     LoginComponent,
+    DashboardComponent,
     DasboardContentComponent,
   ],
   bootstrap: [AppComponent],
